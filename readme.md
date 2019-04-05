@@ -10,16 +10,16 @@ Steps:
    - Auth::routes(['verify' => true]);
 6. Also, we need to protect the HomeController route, so let us do that via adding middleware.
    -   public function __construct()
-    -    {
-    -        $this->middleware(['auth', 'verified']);
-    -    }
+   -    {
+   -        $this->middleware(['auth', 'verified']);
+   -    }
 7. Setup email configuration
    -    MAIL_DRIVER=smtp
-   -     MAIL_HOST=smtp.mailtrap.io
-   -     MAIL_PORT=2525
-   -     MAIL_USERNAME=null
-    -    MAIL_PASSWORD=null
-    -    MAIL_ENCRYPTION=null
+   -    MAIL_HOST=smtp.mailtrap.io
+   -    MAIL_PORT=2525
+   -    MAIL_USERNAME=null
+   -    MAIL_PASSWORD=null
+   -    MAIL_ENCRYPTION=null
 8. Test the email verification:
    -    http://localhost:8000/register
 9. Check the Email and Click on the link 
